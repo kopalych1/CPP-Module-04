@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:44:40 by akostian          #+#    #+#             */
-/*   Updated: 2025/06/01 01:13:35 by akostian         ###   ########.fr       */
+/*   Updated: 2025/06/01 01:25:18 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,20 @@ int	main(void)
 		for (int i = 0; i < N * 2; i++)
 			delete animal_array[i];
 		
+	}
+	// { // Musn't compile
+	// 	Animal ani;
+	// }
+	{
+		std::cout << "--------------------" << "\n";
+		const Animal	*j = new Dog();
+		const Animal	*i = new Cat();
+		std::cout << j->getType() << " " << std::endl;
+		std::cout << i->getType() << " " << std::endl;
+		i->makeSound(); //will output the cat sound!
+		j->makeSound();
+
+		delete i;
+		delete j;
 	}
 }

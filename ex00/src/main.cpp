@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:44:40 by akostian          #+#    #+#             */
-/*   Updated: 2025/05/31 11:22:53 by akostian         ###   ########.fr       */
+/*   Updated: 2025/05/31 12:10:31 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "../include/Cat.hpp"
 #include "../include/Dog.hpp"
 #include "../include/Animal.hpp"
+#include "../include/WrongCat.hpp"
 
 int main(void)
 {
@@ -50,6 +51,17 @@ int main(void)
 
 		delete i;
 		delete j;
+		delete meta;
+	}
+	{
+		std::cout << "----  WrongAnimal test: ----" << "\n";
+		const WrongAnimal	*meta = new WrongAnimal();
+		const WrongAnimal	*i = new WrongCat();
+		std::cout << i->getType() << " " << std::endl;
+		i->makeSound(); //will NOT output the cat sound!
+		meta->makeSound();
+
+		delete i;
 		delete meta;
 	}
 }

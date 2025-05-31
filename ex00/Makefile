@@ -6,7 +6,7 @@
 #    By: akostian <akostian@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 16:43:30 by akostian          #+#    #+#              #
-#    Updated: 2025/05/31 11:27:12 by akostian         ###   ########.fr        #
+#    Updated: 2025/05/31 12:05:20 by akostian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ VPATH				= src
 SRC_DIR				= src
 SRCS				= main.cpp \
 					  Animal.cpp \
-					  Dog.cpp Cat.cpp
+					  Dog.cpp Cat.cpp \
+					  WrongAnimal.cpp WrongCat.cpp
 
 INC_DIR				= include
 INCLUDES			= -I$(INC_DIR)

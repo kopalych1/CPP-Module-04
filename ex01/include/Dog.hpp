@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 19:55:04 by akostian          #+#    #+#             */
-/*   Updated: 2025/05/31 12:53:47 by akostian         ###   ########.fr       */
+/*   Updated: 2025/05/31 21:43:01 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Dog : public Animal {
 		~Dog();
 
 		void	makeSound() const;
+
+		Brain	*getBrain() const;
 };
 
 #endif // DOG_HPP

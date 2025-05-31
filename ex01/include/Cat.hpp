@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 19:55:01 by akostian          #+#    #+#             */
-/*   Updated: 2025/05/31 12:53:41 by akostian         ###   ########.fr       */
+/*   Updated: 2025/05/31 21:38:57 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Cat : public Animal {
 		~Cat();
 
 		void	makeSound() const;
+
+		Brain	*getBrain() const;
 };
 
 #endif // CAT_HPP

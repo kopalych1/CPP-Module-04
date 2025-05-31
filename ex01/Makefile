@@ -6,7 +6,7 @@
 #    By: akostian <akostian@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 16:43:30 by akostian          #+#    #+#              #
-#    Updated: 2025/05/31 12:22:29 by akostian         ###   ########.fr        #
+#    Updated: 2025/05/31 13:08:37 by akostian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ VPATH				= src
 
 SRC_DIR				= src
 SRCS				= main.cpp \
+					  Brain.cpp \
 					  Animal.cpp Dog.cpp Cat.cpp \
 
 INC_DIR				= include

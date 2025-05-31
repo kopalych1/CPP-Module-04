@@ -6,12 +6,14 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 01:24:40 by akostian          #+#    #+#             */
-/*   Updated: 2025/05/27 01:33:55 by akostian         ###   ########.fr       */
+/*   Updated: 2025/05/31 13:12:12 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLORS_HPP
 # define COLORS_HPP
+
+# include "ANSI_colors.h"
 
 # define CLAPTRAP "[" MAG "ClapTrap" CRESET "]"
 # define CONSTRUCTOR "[" BLK "Constructor" CRESET "]"

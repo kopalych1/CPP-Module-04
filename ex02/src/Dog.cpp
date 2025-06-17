@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:45:10 by akostian          #+#    #+#             */
-/*   Updated: 2025/06/01 00:48:24 by akostian         ###   ########.fr       */
+/*   Updated: 2025/06/17 14:57:22 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ Dog& Dog::operator=(const Dog& other)
 		std::cout << DOG << OPERATOR << " Assignment opperator called" << "\n";
 	if (this != &other) {
 		Animal::operator=(other);
-		this->brain = other.brain;
+		delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:44:40 by akostian          #+#    #+#             */
-/*   Updated: 2025/06/01 01:07:47 by akostian         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:01:33 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,18 @@
 #include "../include/Cat.hpp"
 #include "../include/Dog.hpp"
 
+static void	printTestN(void)
+{
+	static short	n = 0;
+
+	std::cout << "\n" << ">========= Test " << n++ << " =========<" << "\n" << "\n";
+}
+
 int	main(void)
 {
 	{
+		printTestN();
+
 		Brain	b;
 
 		b.setIdea(42, "123");
@@ -31,7 +40,8 @@ int	main(void)
 
 	}
 	{
-		std::cout << "--------------------" << "\n";
+		printTestN();
+
 		Cat	*cat1 = new Cat();
 
 		Brain *cat1_brain = cat1->getBrain();
@@ -50,7 +60,8 @@ int	main(void)
 		delete cat1;
 	}
 	{
-		std::cout << "--------------------" << "\n";
+		printTestN();
+
 		Dog	*dog1 = new Dog();
 
 		Brain *dog1_brain = dog1->getBrain();
@@ -59,7 +70,9 @@ int	main(void)
 		dog1_brain->setIdea(2, "Idea2");
 		dog1_brain->setIdea(3, "Idea3");
 
-		Dog	dog2(*dog1);
+		Dog	dog2;
+
+		dog2 = *dog1;
 
 		std::cout << "Idea 1: " << dog2.getBrain()->getIdea(1) << "\n";
 		std::cout << "Idea 2: " << dog2.getBrain()->getIdea(2) << "\n";
@@ -69,7 +82,8 @@ int	main(void)
 		delete dog1;
 	}
 	{
-		std::cout << "--------------------" << "\n";
+		printTestN();
+
 		const int	N = 4;
 
 		const Animal	*animal_array[N * 2];

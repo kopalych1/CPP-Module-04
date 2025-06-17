@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:45:06 by akostian          #+#    #+#             */
-/*   Updated: 2025/06/01 00:48:06 by akostian         ###   ########.fr       */
+/*   Updated: 2025/06/17 14:56:48 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ Cat& Cat::operator=(const Cat& other)
 		std::cout << CAT << OPERATOR << " Assignment opperator called" << "\n";
 	if (this != &other) {
 		Animal::operator=(other);
-		this->brain = other.brain;
+		delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return *this;
 }
